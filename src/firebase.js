@@ -11,3 +11,5 @@ const firebaseConfig = {
 	databaseURL: "https://firecase-practise-default-rtdb.firebaseio.com/",
 };
 export const firebaseApp = initializeApp(firebaseConfig);
+
+export default firebaseApp;
