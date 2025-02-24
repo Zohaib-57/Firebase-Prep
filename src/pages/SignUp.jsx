@@ -5,7 +5,8 @@ import { firebaseApp } from "../firebase";
 const SignUp = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [error, setError] = useState("");
+	const [username, setUsername] = useState("");
+    const [error,setError] = useState("")
 
 	const auth = getAuth(firebaseApp);
 
@@ -27,6 +28,17 @@ const SignUp = () => {
 					Sign Up
 				</h2>
 				{error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+				<label className="block text-gray-600 text-sm font-medium mb-2">
+					Username
+				</label>
+				<input
+					type="email"
+					required
+					value={username}
+					placeholder="Enter your username"
+					onChange={(e) => setUsername(e.target.value)}
+					className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+				/>
 				<label className="block text-gray-600 text-sm font-medium mb-2">
 					Email
 				</label>
